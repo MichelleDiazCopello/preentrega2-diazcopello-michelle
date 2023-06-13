@@ -1,0 +1,536 @@
+* {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Comienzo de estilo del menú del Header */
+
+header {
+    background-color: white;
+    top: 0;
+    z-index: 2;
+}
+
+header section {
+    display: grid;
+    margin: 0 0 10px 0;
+    justify-items: center;
+    align-items: center;
+    row-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "imagen imagen imagen imagen imagen"
+        "inicio ofertas reservar unidades servicios";
+}
+
+header section ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+header li {
+    list-style-type: none;
+}
+
+header li a {
+    text-decoration: none;
+    color: black;
+}
+
+.img-header {
+    display: flex;
+}
+
+.header__section--reservar {
+    display: grid;
+    margin: 0 0 10px 0;
+    justify-items: center;
+    align-items: center;
+    row-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "imagen imagen imagen imagen"
+        "inicio ofertas unidades servicios";
+}
+
+.html-reservar__section--reservar {
+    display: none;
+}
+
+    /* Inicio Grid Areas Header */
+
+    .img-header{
+        grid-area: imagen;
+    }
+
+    .section__li--inicio{
+        grid-area: inicio;
+    }
+
+    .section__li--ofertas{
+        grid-area: ofertas;
+    }
+
+    .section__li--unidades{
+        grid-area: unidades;
+    }
+
+    .section__li--servicios{
+        grid-area: servicios;
+    }
+
+    .section__li--reservar{
+        grid-area: reservar;
+    }
+
+/* Medias Queries Header Section */
+
+@media (min-width: 768px){
+    header {
+        position: sticky;
+    }
+
+    header section {
+        display: grid;
+        margin-bottom: 5px;
+        justify-items: center;
+        align-items: center;
+        row-gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "inicio ofertas imagen unidades servicios";
+    }
+
+    .section__li--reservar{
+        display: none;
+    }
+}
+
+/* Inicio estilo formulario de consulta de disponibilidad. */
+
+.index-form {
+    display: none;
+}
+
+.index-form div {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px 5px 10px;
+    border-style: solid;
+    border-width: thin;
+    width: 25%;
+    align-items: center;
+}
+
+#check-out {
+    border-left: 0;
+    border-right: 0;
+}
+
+#peoples {
+    border-right: 0;
+}
+
+#boton-consultar {
+    background-color: aquamarine;
+    width: 100%;
+    height: 100%;
+    font-size: 130%;
+    margin: 0;
+    padding: 0;
+}
+
+#boton-consultar:hover {
+    font-weight: 600;
+}
+
+.index-form label {
+    display: flex;
+    align-items: flex-start;
+}
+
+.index-form input {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border: none;
+    width: 100%;
+    height: 70%;
+}
+
+/* Medias Queries Formulario */
+
+@media (min-width: 768px) {
+    .index-form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 65px;
+        margin: 10px 0 10px 0;
+    }
+}
+
+/* Fin estilo formulario de consulta de disponibilidad. */
+
+/* Fin de estilo del menú del header */
+
+/* Inicio estilo main. */
+
+.indexmain {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 1em;
+}
+
+.indexmain__section--information{
+    display: grid;
+    position: relative;
+}
+
+.indexmain__img--outdoor {
+    width: 100%;
+}
+
+.indexmain__div--information {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    color: white;
+    align-self: flex-end;
+    margin-bottom: 2em;
+    font-size: 70%;
+}
+
+.indexmain__p--phone {
+    margin-bottom: 0;
+}
+
+.indexmain__a--phone {
+    text-decoration: none;
+    color: white;
+}
+
+.indexmain__section--description {
+    margin:0 1em 2em 1em;
+}
+
+.indexmain__section--article {
+    text-align: justify;
+}
+
+.section__h2--title {
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+.ofertasmain {
+    display: grid;
+}
+
+.ofertasmain__a--2x1 {
+    text-decoration: none;
+    color: black;
+    margin: 1em;
+    border-style: solid;
+    border-width: thin;
+}
+
+.ofertasmain__a--30off {
+    text-decoration: none;
+    color: black;
+    margin: 1em;
+    border-style: solid;
+    border-width: thin;
+}
+
+.img-ofertasmain {
+    width: 100%;
+}
+
+.ofertasmain__div {
+    padding: 5% 5% 2% 5%;
+}
+
+.ofertasmain__span--title {
+    font-size: 100%;
+    font-weight: 600;
+}
+
+.ofertasmain__span--description {
+    font-size: 70%;
+    margin: 0;
+}
+
+.reservarmain {
+    display: grid;
+    margin: 1%;
+}
+
+.reservarmain__p--title {
+    font-size: 150%;
+    font-weight: 600;
+    padding: 1% 0 1% 0;
+}
+
+.reservarmain__p--description {
+    text-align: justify;
+    padding: 1% 0 1% 0;
+}
+
+.reservarmain__section--ul {
+    margin-left: 2%;
+}
+
+.reservarmain__section--ul li {
+    display: flex;
+    flex-direction: column;
+    padding: 2% 0;
+}
+
+.reservarmain__section--ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.reservarmain__section--form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.reservarmain__form {
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+}
+
+.reservarmain__form--div {
+    padding: 3px;
+}
+
+.reservarmain__form label {
+    padding: 1% 0 1% 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.reservarmain__form--checkboxs {
+    padding: 3px;
+}
+
+/* Grid Areas Main */
+
+.ofertasmain__a--2x1 {
+    grid-area: 2x1;
+}
+
+.ofertasmain__a--30off {
+    grid-area: 30off;
+}
+
+.reservarmain__form--nombre {
+    grid-area: nombre;
+}
+
+.reservarmain__form--email {
+    grid-area: email;
+}
+
+.reservarmain__form--celular {
+    grid-area: celular;
+}
+
+.reservarmain__form--cantidad {
+    grid-area: cantidad;
+}
+
+.reservarmain__form--grupo {
+    grid-area: grupo;
+}
+
+.reservarmain__form--f.ingreso {
+    grid-area: ingreso;
+}
+
+.reservarmain__form--f.salida {
+    grid-area: salida;
+}
+
+.reservarmain__form--peticiones {
+    grid-area: peticiones;
+}
+
+.checkboxs-terms {
+    grid-area: terms;
+}
+
+.checkboxs-autoriced {
+    grid-area: autoriced;
+}
+
+.reservarmain__form--b.enviar {
+    grid-area: enviar;
+}
+
+.reservarmain__form--b.limpiar {
+    grid-area: limpiar;
+}
+
+/* Medias Queries Main */
+
+@media (min-width: 768px){
+    .indexmain__div--information {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        color: white;
+        align-self: flex-end;
+        margin-bottom: 3em;
+        margin-left: 3em;
+    }
+
+    .ofertasmain {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "2x1 30off";
+    }
+        
+    .ofertasmain__a {
+        text-decoration: none;
+        color: black;
+        margin: 1em;
+        border-style: solid;
+        border-width: thin;
+    }
+    
+    .ofertasmain__div {
+        padding: 5% 5% 2% 5%;
+    }
+    
+    .ofertasmain__span--title {
+        font-size: 100%;
+        font-weight: 600;
+    }
+    
+    .ofertasmain__span--description {
+        font-size: 70%;
+        margin: 0;
+    }
+
+    .reservarmain__form {
+        width: 50vw;
+    }
+}
+
+/* Fin estilo main */
+
+/* Inicio Estilo Footer */
+
+.footer-container{
+    display: flex;
+    justify-content: center;
+    font-size: 80%;
+}
+
+.footer__div--bloque1{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__bloque1--title{
+    font-size: 150%;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0%;
+}
+
+footer li {
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+}
+
+footer ul p {
+    margin-bottom: 0;
+}
+
+/* Grid Areas footer */
+
+.footer__div--bloque1{
+    grid-area: bloque1;
+}
+
+.footer__div--bloque2{
+    grid-area: bloque2;
+}
+
+.footer__div--bloque3{
+    grid-area: bloque3;
+}
+
+/* Medias Queries footer */
+
+@media (min-width: 768px) {
+    .footer-container {
+    display: grid;
+    }
+
+    footer div div {
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer__div--container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "bloque1 bloque2 bloque3";
+        column-gap: 5px;
+        align-items: center;
+        justify-items: center;
+    }
+
+    footer li {
+    align-items: left;
+    }
+
+    #maps {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .footerlogo {
+        display: none;
+    }
+    
+    #maps {
+        display: none;
+    }
+
+    footer li {
+    align-items: center;
+    }
+
+    .footer__li--direction {
+        text-align: center;
+    }
+}
+
+/* Fin Estilo footer */
